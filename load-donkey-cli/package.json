@@ -1,0 +1,26 @@
+{
+  "name": "load-donkey-cli",
+  "version": "1.0.0",
+  "description": "load-donkey-cli",
+  "main": "src/main/application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "main": "node src/main/application.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "load-donkey": "src/main/application.js"
+  },
+  "keywords": [
+    "load-donkey"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^3.14.0",
+    "pug": "^3.0.0",
+    "load-donkey-core": "file:../load-donkey-core"
+  }
+}

@@ -1,0 +1,21 @@
+testEngine: ab
+functions:
+  - address: http://host-aws.com
+    provider: aws
+  - address: http://host-gcp.com
+    provider: gcp
+  - address: http://host-azure.com
+    provider: azure
+request:
+  method: POST
+  contentType: application/json
+  headers:
+    - key: Authorization
+      value: 123
+  queryParameters:
+    - key: pageSize
+      value: 25
+  bodyFile: /path/to/file/containing/body
+parameters:
+  requestCount: 10000
+  concurrencyCount: 100

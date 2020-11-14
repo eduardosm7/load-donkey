@@ -1,0 +1,18 @@
+html
+    head
+        title #{title}
+        script(src="https://d3js.org/d3.v5.min.js")
+        script
+            include result-bar-chart.js
+        style
+            include report.css
+    body
+        div(class='container')
+            div(class='content')
+                div(class='title') Load Donkey
+                each result in results
+                    div(class='result')
+                        - var chartId = `result-bar-chart-${result.key}`
+                        div(class='result-title') #{result.title}
+                        div(id=chartId)
+                        script renderResultBarChart('#{chartId}', !{JSON.stringify(result.data)});
